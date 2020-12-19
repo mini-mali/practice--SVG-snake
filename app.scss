@@ -17,5 +17,28 @@ body {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+}
+
+
+.ui-controls {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  button {
+    margin-bottom: 1rem;
+  }
+  .up {
+    //...
+  }
+  .down{
+    //...
+  }
 }
