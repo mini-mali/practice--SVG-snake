@@ -5,6 +5,7 @@ const
   // UI controls
   UP = document.querySelector('button.up'),
   DOWN = document.querySelector('button.down'),
+  // for how many pixels should the anchor point move?
   STEP = 20;
 
 
@@ -47,4 +48,18 @@ DOWN.onclick = (e) => {
 document.addEventListener("DOMContentLoaded", function(){
   //UP.click();   // trigger click
 });
+
+
+
+
+//
+//  Keyboard control
+//
+document.addEventListener('keydown', function(event) {
+    //const key = event.key;
+    console.log(event.key);
+});
+
+
+
 
