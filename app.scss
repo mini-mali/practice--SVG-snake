@@ -3,6 +3,10 @@
 //
 $unit: 1rem;
 
+
+$white: #fff;
+$black: darken($white, 100%);
+
 $body--background: #29142E;
 
 $svg--background: darken($body--background, 5%);
@@ -10,6 +14,9 @@ $svg--line: #802852;
 
 $button: #CF7557;
 $button--hover: lighten($button, 15%);
+$cta-button: purple;
+$cta-button--hover: lighten($cta-button, 15%);
+
 
 
 //
@@ -46,45 +53,93 @@ body {
 //
 .ui-controls {
   position: fixed;
-  top: 2vw;
-  right: 2vw;
+  bottom: $unit * 2;
+  left: 50%;
+  transform: translateX(-50%);
 
-  //display: flex;
-  //flex-direction: column;
+  display: grid;
+  padding: $unit;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: $unit / 2;
+  justify-items: center;
+  align-items: center;
 
-  .group {
-    display: flex;
-    margin-bottom: $unit * 2;
+  background: rgba($white, .125);
+  @supports (backdrop-filter: none) {
+    backdrop-filter: blur( $unit / 4 );
+  }
+  border: $unit/16 solid rgba($white, .0625);
+  border-radius: $unit;
+  box-shadow: 0 0 $unit*2 $black;
+}
 
-    &.up-down {
-      flex-direction: column;
-    }
-    &.left-right {
 
-    }
+
+
+//
+//  Button
+//
+button {
+  width: $unit * 3;
+  height: $unit * 3;
+
+  font-size: $unit * 1.5;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: center;
+
+  background: $button;
+  border: 0;
+  border-bottom: $unit/2 solid darken($button, 25%);
+  border-radius: $unit;
+
+  cursor: pointer;
+  user-select: none;
+
+
+  transition:
+    background 50ms ease,
+    color 50ms ease;
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: $button--hover;
+  }
+  &:active {
+    border-bottom-width: $unit / 4;
   }
 
-  button {
-    width: $unit * 3;
-    height: $unit * 3;
-    margin: $unit / 3;
+  //  variants
+  //
+  //&.up {___}
+  //&.right {___}
+  //&.down {___}
+  //&.left {___}
+  
+  &.cta {
+    position: fixed;
+    bottom: $unit;
+    right: $unit;
 
-    font-size: 3vw;
-    line-height: 1.5;
-    font-weight: bold;
-    text-align: center;
+    width: $unit * 5;
+    height: $unit * 5;
 
-    background: $button;
-    border: 0;
-    border-radius: 2rem;
+    font-size: $unit * 2;
+    color: rgba($white, .5);
 
-    cursor: pointer;
-
-    &:focus {
-      outline: none;
-    }
+    background: $cta-button;
+    border-bottom: none;
+    border-radius: $unit * 4;
+    box-shadow: 0 $unit/4 $unit/2 darken($cta-button, 25%);
     &:hover {
-      background: $button--hover;
+      color: rgba($black, .5);
+      background: $cta-button--hover;
+    }
+    &:active {
+      box-shadow: none;
     }
   }
 }
@@ -110,50 +165,4 @@ line {
   stroke: $svg--line;
   stroke-width: $unit;
   stroke-linecap: round;
-}
-
-
-
-//
-//  Controls
-//
-.ui-controls-grid {
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: $unit * 2;
-
-
-color: white;
-font-size: $unit * 2;
-
-  button {
-    width: $unit * 3;
-    height: $unit * 3;
-    margin: $unit / 3;
-
-    font-size: 3vw;
-    line-height: 1.5;
-    font-weight: bold;
-    text-align: center;
-
-    background: $button;
-    border: 0;
-    border-radius: 2rem;
-
-    cursor: pointer;
-    user-select: none;
-
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      background: $button--hover;
-    }
-  }
 }
