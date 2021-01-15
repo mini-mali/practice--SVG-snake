@@ -5,6 +5,9 @@ const
   // UI controls
   UP = document.querySelector('button.up'),
   DOWN = document.querySelector('button.down'),
+  LEFT = document.querySelector('button.left'),
+  RIGHT = document.querySelector('button.right'),
+  PLAY = document.querySelector('button.play'),
   // for how many pixels should the anchor point move?
   STEP = 20;
 
@@ -38,8 +41,13 @@ DOWN.onclick = (e) => {
   console.log(x1, x2, y1, y2);
 };
 
+LEFT.onclick = (e) => {
+  console.log('LEFT');
+};
 
-
+RIGHT.onclick = (e) => {
+  console.log('RIGHT');
+};
 
 
 //
@@ -61,5 +69,14 @@ document.addEventListener('keydown', function(event) {
 });
 
 
+
+
+
+//
+//  Play
+//
+PLAY.onclick = (e) => {
+  console.info('PLAY');
+};
 
 
