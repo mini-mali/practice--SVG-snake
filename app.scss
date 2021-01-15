@@ -88,6 +88,7 @@ button {
   line-height: 1.5;
   font-weight: bold;
   text-align: center;
+  color: rgba($black, .75);
 
   background: $button;
   border: 0;
@@ -124,23 +125,18 @@ button {
     bottom: $unit;
     right: $unit;
 
-    width: $unit * 5;
-    height: $unit * 5;
-
-    font-size: $unit * 2;
-    color: rgba($white, .5);
+line-height: 50px;  // FIXME
 
     background: $cta-button;
     border-bottom: none;
-    border-radius: $unit * 4;
-    box-shadow: 0 $unit/4 $unit/2 darken($cta-button, 25%);
+    box-shadow: inset 0 $unit/4 $unit/2 darken($cta-button, 25%);
+
     &:hover {
-      color: rgba($black, .5);
       background: $cta-button--hover;
     }
     &:active {
       box-shadow: none;
-    }
+    } 
   }
 }
 
