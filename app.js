@@ -42,11 +42,15 @@ DOWN.onclick = (e) => {
 };
 
 LEFT.onclick = (e) => {
-  console.log('LEFT');
+  x2 -= STEP;
+  line.setAttribute('x2', x2);
+  console.log(x1, x2, y1, y2);
 };
 
 RIGHT.onclick = (e) => {
-  console.log('RIGHT');
+  x2 += STEP;
+  line.setAttribute('x2', x2);
+  console.log(x1, x2, y1, y2);
 };
 
 
