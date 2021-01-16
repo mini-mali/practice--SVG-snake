@@ -32,25 +32,25 @@ let
 UP.onclick = (e) => {
   y2 -= STEP;
   line.setAttribute('y2', y2);
-  console.log(x1, x2, y1, y2);
+  console.log(x1, y1, x2, y2);
 };
 
 DOWN.onclick = (e) => {
   y2 += STEP;
   line.setAttribute('y2', y2);
-  console.log(x1, x2, y1, y2);
+  console.log(x1, y1, x2, y2);
 };
 
 LEFT.onclick = (e) => {
   x2 -= STEP;
   line.setAttribute('x2', x2);
-  console.log(x1, x2, y1, y2);
+  console.log(x1, y1, x2, y2);
 };
 
 RIGHT.onclick = (e) => {
   x2 += STEP;
   line.setAttribute('x2', x2);
-  console.log(x1, x2, y1, y2);
+  console.log(x1, y1, x2, y2);
 };
 
 
