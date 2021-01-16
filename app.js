@@ -68,8 +68,24 @@ document.addEventListener("DOMContentLoaded", function(){
 //  Keyboard control
 //
 document.addEventListener('keydown', function(event) {
-    //const key = event.key;
-    console.log(event.key);
+
+  //  TODO - optimize - implement "callstack"
+  //  https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript
+  //
+  switch (event.key) {
+    case "ArrowUp":
+      UP.click();
+      break;
+    case "ArrowRight":
+      RIGHT.click();
+      break;
+    case "ArrowDown":
+      DOWN.click();
+      break;
+    case "ArrowLeft":
+      LEFT.click();
+      break;
+  }
 });
 
 
