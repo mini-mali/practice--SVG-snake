@@ -92,7 +92,7 @@ button {
 
   background: $button;
   border: 0;
-  border-bottom: $unit/2 solid darken($button, 25%);
+  border-bottom: $unit/4 solid darken($button, 25%);
   border-radius: $unit;
 
   cursor: pointer;
@@ -110,7 +110,8 @@ button {
     background: $button--hover;
   }
   &:active {
-    border-bottom-width: $unit / 4;
+    background: $button--hover;
+    border-bottom-width: $unit / 8;
   }
 
   //  variants

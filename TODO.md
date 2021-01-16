@@ -1,7 +1,6 @@
 # To do list
 * Keybord control:
-** W = up
-** A = left
-** S = down
-** D = right
 ** space = reset
+
+# UX improvements
+* when keybord key is pressed, visual feedback is needed
