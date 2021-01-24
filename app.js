@@ -85,6 +85,12 @@ document.addEventListener('keydown', function(event) {
     case "ArrowLeft":
       LEFT.click();
       break;
+    //
+    // space bar
+    //
+    case " ":
+      PLAY.click();
+      break;
   }
 });
 
@@ -97,6 +103,30 @@ document.addEventListener('keydown', function(event) {
 //
 PLAY.onclick = (e) => {
   console.info('PLAY');
+
+
+  //
+  //  get line length
+  //
+  let lineLength = line.getTotalLength();
+  console.log(lineLength);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
